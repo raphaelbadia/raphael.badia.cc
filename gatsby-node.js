@@ -1,8 +1,11 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const moment = require('moment')
+require('moment/locale/fr')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+  moment.locale('fr')
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const result = await graphql(
@@ -45,6 +48,7 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: post.node.fields.slug,
         previous,
         next,
+        locale: 'fr'
       },
     })
   })

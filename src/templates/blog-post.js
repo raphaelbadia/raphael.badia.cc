@@ -1,10 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import moment from 'moment'
+import 'moment/locale/fr'
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import '../style.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -35,7 +38,7 @@ class BlogPostTemplate extends React.Component {
                 marginBottom: rhythm(1),
               }}
             >
-              {post.frontmatter.date}
+              {moment(post.frontmatter.date).locale('fr').format('[Le] DD MMMM YYYY')}
             </p>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -95,7 +98,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         description
       }
     }
