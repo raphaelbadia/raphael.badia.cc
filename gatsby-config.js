@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Tester, c'est douter`,
+    title: `// TODO: {blog.title}`,
     author: `Raphaël Badia`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
