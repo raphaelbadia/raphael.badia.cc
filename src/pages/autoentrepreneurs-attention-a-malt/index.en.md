@@ -5,3 +5,5 @@ description: "Si vous flirtez régulièrement avec la limite des 70 000 euros de
 ---
 lololl
 !["l](./effects.jpg)
+
+[404](/404/) 
