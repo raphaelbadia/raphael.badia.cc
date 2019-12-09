@@ -1,26 +1,11 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-
+import profilePic from "../assets/profile-pic.jpg"
 import { rhythm } from "../utils/typography"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author
@@ -33,7 +18,7 @@ const Bio = () => {
   `)
 
   const { author } = data.site.siteMetadata
-  console.log('data', data)
+
   return (
     <div
       style={{
@@ -41,21 +26,20 @@ const Bio = () => {
         marginBottom: rhythm(2.5),
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
+      <img
+        src={profilePic}
         alt={author}
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
+          width: rhythm(2),
+          height: rhythm(2),
+          borderRadius: "50%",
         }}
       />
       <p>
-        Blog personnel de <strong>{author}</strong>, consultant React en mission chez Docavenue. J'adore parler d'autoentreprenariat, de React et de MVP.
+        Blog personnel de <strong>{author}</strong>, consultant React en mission
+        chez Docavenue. J'adore parler d'autoentreprenariat, de React et de MVP.
       </p>
     </div>
   )
