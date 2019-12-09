@@ -56,9 +56,13 @@ class BlogIndexTemplate extends React.Component {
                     {` • ${formatReadingTime(node.timeToRead)}`}
                   </small>
                 </header>
-                <p
-                  dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
-                />
+                {node.frontmatter.spoiler && (
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.spoiler,
+                    }}
+                  />
+                )}
               </article>
             )
           })}
