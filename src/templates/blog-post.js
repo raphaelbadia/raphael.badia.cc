@@ -6,7 +6,6 @@ import "../fonts/fonts-post.css"
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
-import Signup from "../components/Signup"
 import Panel from "../components/Panel"
 import { formatPostDate, formatReadingTime } from "../utils/helpers"
 import { rhythm, scale } from "../utils/typography"
@@ -24,7 +23,7 @@ const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 
 class Translations extends React.Component {
   render() {
-    let { translations, lang, languageLink, editUrl } = this.props
+    let { translations, lang, languageLink } = this.props
 
     let readerTranslations = translations.filter(lang => lang !== "fr")
 
@@ -73,6 +72,7 @@ const renderAst = new rehypeReact({
 
 class BlogPostTemplate extends React.Component {
   render() {
+    const siteMetadata = this.props.data.site.siteMetadata
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, "data.site.siteMetadata.title")
     let {
@@ -86,9 +86,6 @@ class BlogPostTemplate extends React.Component {
 
     // Replace original links with translated when available.
     let html = post.html
-    console.log("html", html)
-    console.warn("ast", post.htmlAst)
-    console.log("translated", translatedLinks)
     translatedLinks.forEach(link => {
       // jeez
       function escapeRegExp(str) {
@@ -117,6 +114,16 @@ class BlogPostTemplate extends React.Component {
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
       `https://badia.cc${enSlug}`
     )}`
+
+    const author = siteMetadata.authors.find(
+      a => a.id === post.frontmatter.authorid
+    )
+    const translator = siteMetadata.authors.find(
+      a => a.id === post.frontmatter.translatorid
+    )
+    console.log("author", author, translator)
+
+    console.log("LOL LMAEO", post)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -231,6 +238,12 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        authors {
+          id
+          name
+          twitter
+          description
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -242,6 +255,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         spoiler
+        authorid
+        translatorid
       }
       fields {
         slug

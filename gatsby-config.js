@@ -1,6 +1,22 @@
 module.exports = {
   siteMetadata: {
     title: "Badia.cc",
+    authors: [
+      {
+        id: 1,
+        name: "Raphaël Badia",
+        twitter: "@raphaelbadia",
+        description:
+          "Raphaël est un consultant React, actuellement en mission chez Docavenue.",
+      },
+      {
+        id: 2,
+        name: "Brent",
+        twitter: "@brendt_gd",
+        description:
+          "Writing at http://stitcher.io and http://criticast.io, building http://aggregate.stitcher.io, programming at @spatie_be, Christian",
+      },
+    ],
     author: "Raphaël Badia",
     description:
       "Blog personnel de <strong>{author}</strong>, consultant React en mission chez Docavenue. J'adore parler d'autoentreprenariat, de React et de MVP.",
@@ -88,6 +104,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-offline`,
   ],
 }
