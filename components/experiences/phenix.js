@@ -76,7 +76,7 @@ const Maiia = () => {
 							target="_blank"
 							className="text-yellow-600 font-bold"
 						>
-							Voir le feedback sur Malt
+							Voir l'avis sur Malt
 						</a>
 						)
 					</p>
