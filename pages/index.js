@@ -97,7 +97,7 @@ export default function IndexPage() {
 					<h2 className="blue-title">Expériences récentes</h2>
 
 					<ExperienceCard
-						jobTitle="frontend engineer"
+						jobTitle="Développeur Frontend"
 						company="Maiia"
 						dates="Avril 2019 - Juillet 2020"
 						technos={[
@@ -114,7 +114,7 @@ export default function IndexPage() {
 					<div className="mt-6" />
 
 					<ExperienceCard
-						jobTitle="Mobile Developer"
+						jobTitle="Développeur Mobile"
 						company="Phenix"
 						dates="Mars 2019"
 						technos={[
@@ -128,7 +128,7 @@ export default function IndexPage() {
 					<div className="mt-6" />
 
 					<ExperienceCard
-						jobTitle="Lead developer"
+						jobTitle="chef de projet fullstack"
 						company="Meteoright"
 						dates="Novembre 2018 - Février 2019"
 						technos={[
@@ -158,7 +158,7 @@ export default function IndexPage() {
 					<div className="mt-6" />
 
 					<ExperienceCard
-						jobTitle="Développeur Fullstack"
+						jobTitle="Fullstack"
 						company="Docmeetoo - Prkit"
 						dates="Mars 2018 - Juin 2018"
 						technos={[
@@ -174,7 +174,7 @@ export default function IndexPage() {
 					<div className="mt-6" />
 
 					<ExperienceCard
-						jobTitle="Développeur Logiciel"
+						jobTitle="Logiciel"
 						company="Projet personnel"
 						dates="Décembre 2017 - Février 2018"
 						technos={[
@@ -216,6 +216,35 @@ export default function IndexPage() {
 						]}
 						description={`Études à Epitech et 42 au cours desquelles j'ai enchaîné les "Piscines", périodes intense d'apprentissage au cours desquels les étudiants enchaînent les travaux de programmation informatique de 9h à 23h, y compris les weekend.`}
 						onMoreDetails={() => handleSeeMoreDetails('epi42')}
+					/>
+
+					<div className="mt-6" />
+
+					<ExperienceCard
+						jobTitle="Développeur"
+						company="Janson de Sailly"
+						dates="Avril 2013 - Septembre 2015"
+						technos={[
+							{ label: 'C', color: 'orange' },
+							{ label: 'PHP', color: 'purple' },
+							{ label: 'C#', color: 'blue' },
+						]}
+						description="Parallèlement à mon activité principale décrite ci-dessous, réalisation de plusieurs sites webs en freelance, création d'un traceur de véhicule pour un projet d'école, d'un wallet pour bitcoin en ligne et d'un POC de logiciel de transfer de rushs (fichiers > 100gb)."
+						onMoreDetails={() => handleSeeMoreDetails('lycee')}
+					/>
+
+					<div className="mt-6" />
+
+					<ExperienceCard
+						jobTitle="Développeur PHP et administrateur système"
+						company="Travonline.net"
+						dates="Février 2012 - Juin 2014"
+						technos={[
+							{ label: 'PHP', color: 'purple' },
+							{ label: 'Linux', color: 'blue' },
+						]}
+						description="Développement de plugins et de correctifs sur un projet open-source, installation et maintenance de serveurs dédiés, réécriture d'un moteur de jeux MMORTS."
+						onMoreDetails={() => handleSeeMoreDetails('travian')}
 					/>
 				</section>
 			</div>
