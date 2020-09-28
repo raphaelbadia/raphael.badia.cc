@@ -58,6 +58,45 @@
 	background: #009dde;
 }
 
+.meteoright {
+	background: #3b42fc;
+}
+
+.safran {
+	background: #36a365;
+}
+
+.prkit {
+	background-color: #8ae594;
+}
+
+.tcm img {
+	max-width: 600px;
+	/* width: auto; */
+	/* height: auto; */
+}
+
+.phenix-small {
+	background-image: url('/images/phenix-logo-zoomed.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.meteoright-small {
+	background-image: url('/images/meteoright-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.tcm-small {
+	background-image: url('/images/tcm-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .phenix-slide-img {
 	max-height: 400px;
 }

@@ -4,7 +4,7 @@ import { Slide } from 'react-slideshow-image';
 const Maiia = () => {
 	const isMobile = useMedia({ query: '(max-width: 640px)' });
 	return (
-		<div className="">
+		<div className="max-w-screen-lg lg:mx-auto print:mx-auto">
 			<div className="maiia p-8">
 				<h3 className="text-white text-4xl text-center">Maiia</h3>
 				<h4 className="text-white text-xl text-center leading-6">
@@ -141,7 +141,7 @@ const Maiia = () => {
 						chacune de ces pages soit “switchable” entre le mode “édition du
 						centre” et “édition du praticien”, et que les praticiens héritent
 						des réglages du centre. Ces pages contenaient:
-						<ul class="list-disc">
+						<ul className="list-disc">
 							<li>
 								l’édition du profil public du praticien/centre, avec une preview
 								live du résultat affiché sur le site patient
@@ -305,7 +305,7 @@ const Maiia = () => {
 			</div>
 
 			<div className="px-8 py-3">
-				<h4 className="blue-title">Technique</h4>
+				<h4 className="blue-title">Principales tâches</h4>
 				<ul class="list-disc my-3">
 					<li>Implémentation d’une librairie de composants avec storybook</li>
 					<li>

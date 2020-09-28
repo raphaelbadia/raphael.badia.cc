@@ -129,14 +129,15 @@ export default function IndexPage() {
 
 					<ExperienceCard
 						jobTitle="Lead developer"
-						company="Glowstone"
-						dates="Octobre 2018 - Mars 2019"
+						company="Meteoright"
+						dates="Novembre 2018 - Février 2019"
 						technos={[
 							{ label: 'React Native', color: 'blue' },
 							{ label: 'Redux', color: 'purple' },
 							{ label: 'Laravel', color: 'orange' },
 						]}
 						description="Conception UX et supervision de trois développeurs dans le cadre du développement d’une application mobile pour le compte de RB Conseils dont l’objectif était de faire un “Waze pour la météo”."
+						onMoreDetails={() => handleSeeMoreDetails('meteoright')}
 					/>
 
 					<div className="mt-6" />
@@ -144,27 +145,44 @@ export default function IndexPage() {
 					<ExperienceCard
 						jobTitle="Développeur Fullstack"
 						company="Wizards Technologies"
-						dates="Été 2018"
+						dates="Juillet 2018 - Septembre 2018"
 						technos={[
 							{ label: 'Vue', color: 'green' },
 							{ label: 'Vuex', color: 'green' },
 							{ label: 'Laravel', color: 'orange' },
 						]}
 						description="Développement frontend et backend en méthode agile, participation au daily scrum et aux users interviews dans le cadre d’un projet pour Safran Landing Systems."
+						onMoreDetails={() => handleSeeMoreDetails('safran')}
 					/>
 
 					<div className="mt-6" />
 
 					<ExperienceCard
 						jobTitle="Développeur Fullstack"
-						company="Docmeetoo"
-						dates="Janvier 2018 - Juin 2018"
+						company="Docmeetoo - Prkit"
+						dates="Mars 2018 - Juin 2018"
 						technos={[
 							{ label: 'Vue', color: 'green' },
 							{ label: 'Vuex', color: 'green' },
 							{ label: 'Laravel', color: 'orange' },
+							{ label: 'React', color: 'blue' },
 						]}
-						description="Implémentation d’un système de vidéoconférence, intégration de maquettes et interventions diverses sur un projet de plateforme médicale en ligne voulant être les premiers à proposer la téléconsultation à leurs clients."
+						description="Implémentation d’un système de vidéoconférence, intégration de maquettes et interventions diverses sur un projet de plateforme médicale en ligne voulant être les premiers à proposer la téléconsultation à leurs clients. Audit de sécurité pour prkit.co."
+						onMoreDetails={() => handleSeeMoreDetails('docmeetooprkit')}
+					/>
+
+					<div className="mt-6" />
+
+					<ExperienceCard
+						jobTitle="Développeur Logiciel"
+						company="Projet personnel"
+						dates="Décembre 2017 - Février 2018"
+						technos={[
+							{ label: 'C++', color: 'blue' },
+							{ label: 'Node', color: 'green' },
+						]}
+						description="Développement pour mon compte d'un robot d'arbitrage et d'une cryptomonnaie."
+						onMoreDetails={() => handleSeeMoreDetails('crypto')}
 					/>
 
 					<div className="mt-6" />
@@ -172,7 +190,7 @@ export default function IndexPage() {
 					<ExperienceCard
 						jobTitle="Chef de projet fullstack"
 						company="TheCodingMachine"
-						dates="2017"
+						dates="Juillet 2017 - Novembre 2017"
 						technos={[
 							{ label: 'React', color: 'blue' },
 							{ label: 'Node', color: 'green' },
@@ -180,6 +198,24 @@ export default function IndexPage() {
 							{ label: 'Angular', color: 'red' },
 						]}
 						description="Développement d’un générateur de contrats d’assurance pour Ovatio en React-Redux / Node.js et développement d’une application mobile pour les clients d’ABC Salles, leader de la location événementielle."
+						onMoreDetails={() => handleSeeMoreDetails('tcm')}
+					/>
+
+					<div className="mt-6" />
+
+					<ExperienceCard
+						jobTitle="Développeur"
+						company="Epitech - 42"
+						dates="Septembre 2015 - Juin 2017"
+						technos={[
+							{ label: 'C', color: 'orange' },
+							{ label: 'PHP', color: 'purple' },
+							{ label: 'React', color: 'blue' },
+							{ label: 'Node', color: 'green' },
+							{ label: 'Mongo', color: 'green' },
+						]}
+						description={`Études à Epitech et 42 au cours desquelles j'ai enchaîné les "Piscines", périodes intense d'apprentissage au cours desquels les étudiants enchaînent les travaux de programmation informatique de 9h à 23h, y compris les weekend.`}
+						onMoreDetails={() => handleSeeMoreDetails('epi42')}
 					/>
 				</section>
 			</div>
@@ -190,7 +226,7 @@ export default function IndexPage() {
 				className="overflow-scroll"
 			>
 				<button
-					className="absolute top-0 right-0 m-3 bg-gray-600 flex justify-center rounded-full h-12 w-12 cursor-pointer"
+					className="absolute top-0 right-0 m-3 bg-gray-600 flex justify-center rounded-full h-12 w-12 cursor-pointer z-10"
 					onClick={closeDetailsDialog}
 				>
 					<VisuallyHidden>Fermer</VisuallyHidden>
