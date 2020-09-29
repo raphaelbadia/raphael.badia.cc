@@ -50,6 +50,19 @@
 	outline: none;
 }
 
+.slick-dots {
+	bottom: -18px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	@apply text-blue-900;
+}
+
+/* .header-bg {
+	height: 300px;
+} */
+
 .maiia {
 	background: linear-gradient(90deg, #64c9c3, #50b3c8);
 }
