@@ -53,17 +53,20 @@ export default function IndexPage() {
 							Passionné de web depuis l’âge de 15 ans, je suis spécialisé dans
 							la création d’applications web pour de grands comptes.
 							<span className="hidden md:inline">
+								{' '}
 								Du service interne à l’extranet d’envergure, je conçois tous mes
 								projets avec deux priorités : votre sécurité et la satisfaction
 								de vos clients.
 							</span>
 							<span className="block md:inline">
+								{' '}
 								Attentif et impliqué, je saurai m’intégrer très rapidement au
 								sein de votre équipe
 								<span className="hidden md:inline">
+									{' '}
 									et m’imprégner des enjeux de votre projet pour vous
 									accompagner dans sa réalisation technique
-								</span>
+								</span>{' '}
 								tout en étant force de proposition sur d’autres sujets tels que
 								l’UX et le backend.
 							</span>
@@ -84,7 +87,8 @@ export default function IndexPage() {
 					<div className="flex justify-between">
 						<span className="gold-title">Back-end</span>
 						<span className="text-right">
-							PHP (Laravel), Node (Express, Nest)
+							PHP (Laravel), <span className="hidden sm:inline">Node (</span>
+							Express, Nest<span className="hidden sm:inline">)</span>
 						</span>
 					</div>
 					<div className="flex justify-between">

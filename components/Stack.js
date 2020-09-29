@@ -1,6 +1,6 @@
 import { Children } from 'react';
 
-const Stack = ({ children, space = 1 }) => {
+const Stack = ({ children, space = 2 }) => {
 	return Children.map(children, (child, index) => {
 		if (index > 0)
 			return (

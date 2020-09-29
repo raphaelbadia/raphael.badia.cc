@@ -1,17 +1,19 @@
 import { useMedia } from 'react-media';
-import { Slide } from 'react-slideshow-image';
+import BlockQuote from '../BlockQuote';
+import ExperienceBody from '../ExperienceBody';
+import ExperienceHeader from '../ExperienceHeader';
+import Slider from '../Slider';
+import SliderImage from '../SliderImage';
+import Stack from '../Stack';
 
 const Phenix = () => {
 	const isMobile = useMedia({ query: '(max-width: 640px)' });
 	return (
-		<div className="">
-			<div className="flex md:hidden phenix phenix-small h-64 sm:h-56 justify-center content-center"></div>
-			<div className="hidden md:flex phenix sm:h-64 justify-center content-center">
-				<img src="images/phenix-logo.png" className="sm:h-full w-auto" />
-			</div>
-			<div className="px-8 py-3">
+		<>
+			<ExperienceHeader className="phenix phenix-small" />
+			<ExperienceBody>
 				<h4 className="blue-title">Contexte</h4>
-				<blockquote className=" bg-gray-100 px-4 py-2 text-gray-700">
+				<BlockQuote>
 					Engagée pour de meilleures habitudes de consommation, l'entreprise
 					sociale Phenix met entre les mains des entreprises, collectivités et
 					particuliers des moyens faciles pour passer à l'action et soutenir la
@@ -20,13 +22,11 @@ const Phenix = () => {
 					<br />
 					Après avoir racheté Graapz, startup de l'antigaspi, Phenix a décidé de
 					relancer une toute nouvelle version de l’application en React Native.
-				</blockquote>
-			</div>
+				</BlockQuote>
 
-			<div className="px-8 py-3">
 				<h4 className="blue-title">Mission</h4>
-				<div>
-					<p className="">
+				<Stack>
+					<p>
 						Je suis intervenu avant le commencement du projet par Phenix, afin
 						de mettre en place l'architecture du projet et tracer le chemin pour
 						les développeurs de l'équipe qui n'avaient encore jamais eu
@@ -38,39 +38,22 @@ const Phenix = () => {
 						lead de l'équipe sur React Native plus en détail pour qu'il puisse
 						reprendre le développement de l'application sereinement.
 					</p>
-					<Slide easing="ease" duration={5000} infinite>
-						<div className="each-slide relative flex justify-center">
-							<img
-								src="images/phenix-logo.jpg"
-								className="pointer-events-none phenix-slide-img"
-							/>
-							<span className="absolute bottom-0 right-0 left-0 text-blue-700 bg-blue-100 opacity-75 font-semibold text-sm p-3">
-								Splash screen de l'application
-							</span>
-						</div>
-						<div className="each-slide relative flex justify-center">
-							<img
-								src="images/phenix-shops.jpg"
-								className="pointer-events-none phenix-slide-img"
-							/>
-							<span className="absolute bottom-0 right-0 left-0 text-blue-700 bg-blue-100 opacity-75 font-semibold text-sm p-3 ">
-								Liste des boutiques
-							</span>
-						</div>
-						<div className="each-slide relative flex justify-center">
-							<img
-								src="images/phenix-pickup.jpg"
-								className="pointer-events-none phenix-slide-img"
-							/>
-							<span className="absolute bottom-0 right-0 left-0 text-blue-700 bg-blue-100 opacity-75 font-semibold text-sm p-3 ">
-								Empty state du panier vide
-							</span>
-						</div>
-					</Slide>
-				</div>
-			</div>
+					<Slider slidesToShow={2}>
+						<SliderImage
+							src="images/phenix-logo.jpg"
+							text="Splash screen de l'application"
+						/>
+						<SliderImage
+							src="images/phenix-shops.jpg"
+							text="Liste des boutiques"
+						/>
+						<SliderImage
+							src="images/phenix-pickup.jpg"
+							text="Empty state du panier vide"
+						/>
+					</Slider>
+				</Stack>
 
-			<div className="px-8 py-3">
 				<h4 className="blue-title">Principales tâches</h4>
 				<ul class="list-disc my-3">
 					<li>Setup de l’architecture projet React Native</li>
@@ -87,9 +70,7 @@ const Phenix = () => {
 						(Intercom / Firebase / Analytics)
 					</li>
 				</ul>
-			</div>
 
-			<div className="px-8 py-3 mb-5">
 				<h4 className="my-3 blue-title">Résultat</h4>
 				<p>
 					D'après Jeanne de Phenix (
@@ -108,8 +89,8 @@ const Phenix = () => {
 					(pour une nouvelle application). Très efficace, il a fourni un travail
 					professionnel ! Nous recommandons !"
 				</p>
-			</div>
-		</div>
+			</ExperienceBody>
+		</>
 	);
 };
 

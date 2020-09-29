@@ -13,6 +13,11 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+ul {
+	@apply ml-8;
+}
+
 .gold-title {
 	@apply font-semibold text-yellow-700;
 }
@@ -51,7 +56,7 @@
 }
 
 .slick-dots {
-	bottom: -18px;
+	/* bottom: -18px; */
 }
 
 .slick-prev:before,
@@ -96,6 +101,12 @@
 	background-position: center;
 }
 
+@screen md {
+	.phenix-small {
+		background-image: url('/images/phenix-logo.png');
+	}
+}
+
 .meteoright-small {
 	background-image: url('/images/meteoright-logo.png');
 	background-size: contain;
@@ -110,8 +121,13 @@
 	background-position: center;
 }
 
-.phenix-slide-img {
-	max-height: 400px;
+.each-slide {
+	display: flex;
+	justify-content: center;
+}
+
+.each-slide img {
+	max-height: 600px;
 }
 
 /* .each-slide > div {
