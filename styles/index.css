@@ -120,12 +120,13 @@ ul {
 }
 
 .each-slide {
-	display: flex;
-	justify-content: center;
+	/* display: flex;
+	justify-content: center; */
 }
 
 .each-slide img {
 	max-height: 600px;
+	margin: auto;
 }
 
 /* .each-slide > div {
