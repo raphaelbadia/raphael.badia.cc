@@ -10,7 +10,7 @@ const Phenix = () => {
 	const isMobile = useMedia({ query: '(max-width: 640px)' });
 	return (
 		<>
-			<ExperienceHeader className="phenix phenix-small" />
+			<ExperienceHeader className="phenix" />
 			<ExperienceBody>
 				<h4 className="blue-title">Contexte</h4>
 				<BlockQuote>
