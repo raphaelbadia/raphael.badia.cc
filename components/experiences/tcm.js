@@ -1,20 +1,21 @@
 import { useMedia } from 'react-media';
 import { Slide } from 'react-slideshow-image';
+import BlockQuote from '../BlockQuote';
+import ExperienceBody from '../ExperienceBody';
+import ExperienceHeader from '../ExperienceHeader';
+import Slider from '../Slider';
+import SliderImage from '../SliderImage';
+import Stack from '../Stack';
 
 const TheCodingMachine = () => {
 	const isMobile = useMedia({ query: '(max-width: 640px)' });
 	return (
 		<div className="">
-			<div className="flex md:hidden bg-white tcm-small h-64 sm:h-56 justify-center content-center"></div>
-			<div className="hidden md:flex tcm sm:h-64 justify-center content-center">
-				<img
-					src="images/tcm-logo.png"
-					className="sm:h-full w-auto object-contain"
-				/>
-			</div>
-			<div className="px-8 py-3">
+			<ExperienceHeader className="tcm" />
+
+			<ExperienceBody>
 				<h4 className="blue-title">La société</h4>
-				<blockquote className=" bg-gray-100 px-4 py-2 text-gray-700">
+				<BlockQuote>
 					TheCodingMachine est une ESN spécialisée dans le développement web sur
 					mesure, sur les principaux framework PHP et JS. Acteur de l’Open
 					Source, elle a publié plus de 200 paquets et est très fière de
@@ -28,13 +29,11 @@ const TheCodingMachine = () => {
 					s’appuie sur une communauté de développeurs indépendants basé dans le
 					monde entier pour pouvoir délivrer plus rapidement ses
 					fonctionnalités.
-				</blockquote>
-			</div>
+				</BlockQuote>
 
-			<div className="px-8 py-3">
 				<h4 className="blue-title">Mission</h4>
-				<div>
-					<p className="mb-2">
+				<Stack>
+					<p>
 						J’y ai développé mes compétences en React et Node sur un projet
 						d’extranet pour une société d’assurance (Ovatio), et également des
 						compétences en Angular (Ionic) dans une équipe Agile composée de 4
@@ -42,7 +41,7 @@ const TheCodingMachine = () => {
 						professionnels d’ABC Salles, le leader français de la location
 						évènementielle.
 					</p>
-					<p className="mb-2">
+					<p>
 						Dès mon premier jour on m’a placé sur le projet Ovatio : j’y ai
 						implémenté les pages permettant de gérer les assureurs, les
 						apporteurs d’affaires, générer un contrat d’assurance et de
@@ -51,7 +50,7 @@ const TheCodingMachine = () => {
 						rapidement dans le projet, et m’on transféré vers l’équipe qui
 						gérait le plus gros client de la boîte : ABC Salles.
 					</p>
-					<p className="mb-2">
+					<p>
 						Il s’agit du premier site français proposant la location de salles
 						pour des événements comme des mariages, des meetings politiques, des
 						concerts… On m’y a confié le développement d’une application mobile
@@ -65,57 +64,27 @@ const TheCodingMachine = () => {
 						problèmes. La version 1 est sortie en janvier 2018 et a été la
 						première application de TheCodingMachine utilisant Ionic 3 à sortir.
 					</p>
-					<Slide easing="ease" duration={5000} infinite>
-						<div className="each-slide relative flex justify-center">
-							<img
-								src="images/tcm-list.jpeg"
-								className="pointer-events-none phenix-slide-img"
-							/>
-							<span className="absolute bottom-0 right-0 left-0 text-blue-700 bg-blue-100 opacity-75 font-semibold text-sm p-3">
-								Liste des demandes de contact
-							</span>
-						</div>
-						<div className="each-slide relative flex justify-center">
-							<img
-								src="images/tcm-photos.jpeg"
-								className="pointer-events-none phenix-slide-img"
-							/>
-							<span className="absolute bottom-0 right-0 left-0 text-blue-700 bg-blue-100 opacity-75 font-semibold text-sm p-3">
-								Liste des photos d'une salle
-							</span>
-						</div>
-						<div className="each-slide relative flex justify-center">
-							<img
-								src="images/tcm-fiche.jpeg"
-								className="pointer-events-none phenix-slide-img"
-							/>
-							<span className="absolute bottom-0 right-0 left-0 text-blue-700 bg-blue-100 opacity-75 font-semibold text-sm p-3">
-								Fiche d'une salle
-							</span>
-						</div>
-						<div className="each-slide relative flex justify-center">
-							<img
-								src="images/tcm-contact.jpeg"
-								className="pointer-events-none phenix-slide-img"
-							/>
-							<span className="absolute bottom-0 right-0 left-0 text-blue-700 bg-blue-100 opacity-75 font-semibold text-sm p-3">
-								Détail d'une demande d'information
-							</span>
-						</div>
-						<div className="each-slide relative flex justify-center">
-							<img
-								src="images/tcm-menu.jpeg"
-								className="pointer-events-none phenix-slide-img"
-							/>
-							<span className="absolute bottom-0 right-0 left-0 text-blue-700 bg-blue-100 opacity-75 font-semibold text-sm p-3">
-								Menu burger de l'application
-							</span>
-						</div>
-					</Slide>
-				</div>
-			</div>
+					<Slider>
+						<SliderImage
+							src="images/tcm-list.jpeg"
+							text="Liste des demandes de contact"
+						/>
+						<SliderImage
+							src="images/tcm-photos.jpeg"
+							text="Liste des photos d'une salle"
+						/>
+						<SliderImage src="images/tcm-fiche.jpeg" text="Fiche d'une salle" />
+						<SliderImage
+							src="images/tcm-contact.jpeg"
+							text="Détail d'une demande d'information"
+						/>
+						<SliderImage
+							src="images/tcm-menu.jpeg"
+							text="Menu burger de l'application"
+						/>
+					</Slider>
+				</Stack>
 
-			<div className="px-8 py-3">
 				<h4 className="blue-title">Principales tâches</h4>
 				<ul class="list-disc my-3">
 					<li>Développement de composants angular 4</li>
@@ -140,27 +109,27 @@ const TheCodingMachine = () => {
 					<li>Code review</li>
 					<li>Rituels agiles</li>
 				</ul>
-			</div>
 
-			<div className="px-8 py-3 mb-5">
 				<h4 className="my-3 blue-title">Résultat</h4>
-				<p>
-					Une proposition de CDI que j'ai décliné, et d'après Pierre de TCM (
-					<a
-						href="https://www.linkedin.com/in/raphael-badia/"
-						target="_blank"
-						className="text-yellow-600 font-bold"
-					>
-						Voir l'avis sur Linkedin
-					</a>
-					)
-				</p>
-				<img src="images/tcm-bravo.png" />
-				<p className="text-gray-700 italic font-light text-xs">
-					"Il a exercé ses fonctions avec enthousiasme, dynamisme, motivation,
-					efficacité et était particulièrement apprécié par ses collègues."
-				</p>
-			</div>
+				<Stack>
+					<p>
+						Une proposition de CDI que j'ai décliné, et d'après Pierre de TCM (
+						<a
+							href="https://www.linkedin.com/in/raphael-badia/"
+							target="_blank"
+							className="text-yellow-600 font-bold"
+						>
+							Voir l'avis sur Linkedin
+						</a>
+						)
+					</p>
+					<img src="images/tcm-bravo.png" />
+					<p className="text-gray-700 italic font-light text-xs">
+						"Il a exercé ses fonctions avec enthousiasme, dynamisme, motivation,
+						efficacité et était particulièrement apprécié par ses collègues."
+					</p>
+				</Stack>
+			</ExperienceBody>
 		</div>
 	);
 };

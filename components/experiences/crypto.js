@@ -1,15 +1,15 @@
 import { useMedia } from 'react-media';
 import { Slide } from 'react-slideshow-image';
+import ExperienceHeader from '../ExperienceHeader';
 
 const Crypto = () => {
 	const isMobile = useMedia({ query: '(max-width: 640px)' });
 	return (
 		<div className="">
-			<div className="bg-gray-900 p-8">
-				<h3 className="text-white text-4xl text-center">
-					Développement Node / C++
-				</h3>
-			</div>
+			<ExperienceHeader
+				title="Développement Node / C++"
+				className="bg-gray-900"
+			/>
 			<div className="px-8 py-3">
 				<h4 className="blue-title">Contexte</h4>
 				<blockquote className=" bg-gray-100 px-4 py-2 text-gray-700">

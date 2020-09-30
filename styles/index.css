@@ -72,12 +72,34 @@ ul {
 	background: linear-gradient(90deg, #64c9c3, #50b3c8);
 }
 
+.docmeetoo {
+	background-color: #277dc3;
+}
+
 .safran {
-	background: #36a365;
+	background-image: linear-gradient(
+		to right bottom,
+		#36a365,
+		#2fa167,
+		#28a068,
+		#1f9e6a,
+		#159c6b,
+		#079870,
+		#009374,
+		#008f77,
+		#00877b,
+		#007e7d,
+		#00767d,
+		#006d7a
+	);
 }
 
 .prkit {
-	background-color: #8ae594;
+	background-color: #f2f2f2;
+	background-image: url('/images/pr-logo-zoomed.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .tcm img {
@@ -102,6 +124,13 @@ ul {
 	background-position: center;
 }
 
+.tcm {
+	background-image: url('/images/tcm-logo-zoomed.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 @screen md {
 	.phenix {
 		background-image: url('/images/phenix-logo.png');
@@ -110,13 +139,12 @@ ul {
 	.meteoright {
 		background-image: url('/images/meteoright-logo.png');
 	}
-}
-
-.tcm-small {
-	background-image: url('/images/tcm-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+	.prkit {
+		background-image: url('/images/pr-logo.png');
+	}
+	.tcm {
+		background-image: url('/images/tcm-logo.png');
+	}
 }
 
 .each-slide {
