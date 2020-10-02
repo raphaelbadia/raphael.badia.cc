@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import ExperienceCard from '../components/ExperienceCard';
 import Nav from '../components/nav';
 import Tag from '../components/Tag';
@@ -25,6 +26,9 @@ export default function IndexPage() {
 
 	return (
 		<>
+			<Head>
+				<title>Raphaël Badia, consultant React.js freelance</title>
+			</Head>
 			<div className="bg-white max-w-screen-lg p-4 lg:mx-auto print:mx-auto">
 				<header className="flex flex-col text-blue-900 font-semibold">
 					<div className="justify-between hidden sm:flex">
