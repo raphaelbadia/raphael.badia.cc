@@ -102,7 +102,7 @@ export default function IndexPage() {
 				</section>
 
 				<section className="mt-6">
-					<h2 className="blue-title">Expériences récentes</h2>
+					<h2 className="blue-title">Expériences</h2>
 
 					<ExperienceCard
 						jobTitle="Développeur Frontend"

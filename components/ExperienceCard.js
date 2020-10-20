@@ -29,7 +29,7 @@ const ExperienceCard = (props) => {
 			>
 				<span className="print:hidden">Voir en détail</span>
 				<span className="hidden print:inline">
-					Plus de détails sur www.badia.cc
+					Visitez https://raphael.badia.cc pour une version enrichie de ce cv !
 				</span>
 			</div>
 		</div>
