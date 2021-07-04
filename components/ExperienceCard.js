@@ -23,15 +23,18 @@ const ExperienceCard = (props) => {
 			<div className="pb-1">
 				<Tags list={technos} />
 			</div>
-			<div
-				className="text-center block font-semibold text-gray-600 mt-1 underline cursor-pointer"
-				onClick={onMoreDetails}
-			>
-				<span className="print:hidden">Voir en détail</span>
-				<span className="hidden print:inline">
-					Visitez https://raphael.badia.cc pour une version enrichie de ce cv !
-				</span>
-			</div>
+			{onMoreDetails && (
+				<div
+					className="text-center block font-semibold text-gray-600 mt-1 underline cursor-pointer"
+					onClick={onMoreDetails}
+				>
+					<span className="print:hidden">Voir en détail</span>
+					<span className="hidden print:inline">
+						Visitez https://raphael.badia.cc pour une version enrichie de ce cv
+						!
+					</span>
+				</div>
+			)}
 		</div>
 	);
 };

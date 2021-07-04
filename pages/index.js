@@ -32,7 +32,7 @@ export default function IndexPage() {
 			<div className="bg-white max-w-screen-lg p-4 lg:mx-auto print:mx-auto">
 				<header className="flex flex-col text-blue-900 font-semibold">
 					<div className="justify-between hidden sm:flex">
-						<span>0647475300</span>
+						{/* <span>0647475300</span> */}
 						<span className="">Raphaël Badia</span>
 						<span>raphael@badia.cc</span>
 					</div>
@@ -48,7 +48,7 @@ export default function IndexPage() {
 						<img src="/images/avatar.jpg" className="h-48 w-48 rounded-full" />
 						<div className="flex flex-col pl-3 text-lg text-right sm:hidden">
 							<span className="font-semibold text-2xl">Raphaël Badia</span>
-							<span>0647475300</span>
+							{/* <span>0647475300</span> */}
 							<span>raphael@badia.cc</span>
 						</div>
 					</div>
@@ -105,9 +105,25 @@ export default function IndexPage() {
 					<h2 className="blue-title">Expériences</h2>
 
 					<ExperienceCard
+						jobTitle="Lead Développeur"
+						company="Maiia"
+						dates="Décembre 2020 - Maintenant"
+						technos={[
+							{ label: 'React', color: 'blue' },
+							{ label: 'Redux (Sagas)', color: 'purple' },
+							{ label: 'Next', color: 'gray' },
+							{ label: 'Storybook', color: 'pink' },
+							{ label: 'Cypress', color: 'green' },
+						]}
+						description="Promotion au poste de lead sur le site grand public (maiia.com) et management de son équipe de 7 personnes. Augmentation de la couverture de tests pour stabiliser la plateforme, développement des fonctionalités  pour la stratégie de vaccination contre la covid-19. Création d'un parcours de prise de rdv en marque blanche."
+					/>
+
+					<div className="mt-6" />
+
+					<ExperienceCard
 						jobTitle="Développeur Frontend"
 						company="Maiia"
-						dates="Avril 2019 - Juillet 2020"
+						dates="Avril 2019 - Décembre 2020"
 						technos={[
 							{ label: 'React', color: 'blue' },
 							{ label: 'Redux (Sagas)', color: 'purple' },
